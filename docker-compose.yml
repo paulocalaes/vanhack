@@ -1,3 +1,11 @@
+angular:
+  image: teracy/angular-cli
+  volumes:
+    - ./images/angular/vanhack:/opt/app
+  working_dir: /opt/app
+  ports:
+    - 4200:4200
+  command: ng serve --host=0.0.0.0
 nginx:
   build: images/nginx
   command: nginx -g "daemon off;"
